@@ -1,0 +1,554 @@
+/* ---------------- BACKGROUND IMAGES ---------------- */
+
+.login-bg {
+    background: url("../static/login-bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-bg {
+    background: url("../static/login-bg.jpg") no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-bg {
+    background: url("../static/login-bg.jpg") no-repeat center center/cover;
+    min-height: 100vh;
+}
+
+/* ---------------- LOGIN BOX ---------------- */
+
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.hospital-name {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #2980b9;
+}
+
+.register-link {
+    margin-top: 15px;
+}
+
+.register-link a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;   /* Left & Right alignment */
+    align-items: center;
+    padding: 50px 40px;
+    background: rgba(44, 62, 80, 0.95);
+}
+
+.nav-left a,
+.nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+	font-size:25px
+}
+
+.nav-left a:hover {
+    color: #3498db;
+}
+
+/* Remove extra margin from last left link */
+.nav-left a:last-child {
+    margin-right: 0;
+}
+
+/* Logout button style */
+.logout-btn {
+    background: #e74c3c;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background: #c0392b;
+}
+/* ================= DASHBOARD ================= */
+/* ================= DASHBOARD LAYOUT ================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 boxes per row */
+    gap: 40px; /* Space between boxes */
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+/* Bigger Box Style */
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Title */
+.card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Description */
+.card p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* Button */
+.card a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.card a:hover {
+    background: #1e8449;
+}
+/* ================= PATIENTS PAGE ================= */
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Add Patient Button */
+a[href="/add_patient"] {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a[href="/add_patient"]:hover {
+    background: #1e8449;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+th {
+    background: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Table Data */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background: #f2f9ff;
+}
+
+/* Add Record Button */
+td a {
+    padding: 6px 12px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+td a:hover {
+    background: #2980b9;
+}
+/* ================= ADD PATIENT PAGE ================= */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+/* Form Container */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Inputs & Select */
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+/* Focus Effect */
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Submit Button */
+form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #1e8449;
+}
+/* ================= BOOK APPOINTMENT PAGE ================= */
+
+.top-btn {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.view-btn {
+    padding: 8px 15px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.view-btn:hover {
+    background: #2980b9;
+}
+
+/* Form Styling (if not already added) */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+form input,
+form select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+form input:focus,
+form select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+form button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px;
+    background: #e67e22;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #ca6f1e;
+}
+/* ================= APPOINTMENTS PAGE ================= */
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+/* Add Appointment Button */
+.add-btn {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.add-btn:hover {
+    background: #1e8449;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Header */
+th {
+    background: #2c3e50;
+    color: white;
+    padding: 12px;
+    text-align: center;
+}
+
+/* Table Data */
+td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background: #f2f9ff;
+}
+/* ================= MEDICAL RECORD PAGE ================= */
+
+h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #2c3e50;
+}
+
+/* Form Container */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Labels */
+form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #34495e;
+}
+
+/* Textareas */
+form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    resize: none;
+    transition: 0.3s;
+}
+
+/* Focus Effect */
+form textarea:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+/* Submit Button */
+form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: #1e8449;
+}
+/* Appointment Action Buttons */
+
+.complete-btn {
+    padding: 6px 12px;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.complete-btn:hover {
+    background: #1e8449;
+}
+
+.cancel-btn {
+    padding: 6px 12px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.cancel-btn:hover {
+    background: #c0392b;
+}
+.stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-box {
+    background:green;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+.dark-mode {
+    background: #222;
+    color: white;
+}
+/* History Button */
+
+.history-btn {
+    padding: 6px 12px;
+    background: #8e44ad;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-left: 5px;
+}
+
+.history-btn:hover {
+    background: #6c3483;
+}
+/* PDF Download Button */
+
+.download-btn {
+    display: inline-block;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    background: #27ae60;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.download-btn:hover {
+    background: #1e8449;
+}

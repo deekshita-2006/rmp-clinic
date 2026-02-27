@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Book Appointment</h2>
+
+<!-- Add Appointment Button -->
+<div class="top-btn">
+    <a href="/appointments" class="view-btn">View Appointments</a>
+</div>
+
+<form method="POST">
+    <label>Select Patient:</label>
+    <select name="patient_id" required>
+        <option value="">Select Patient</option>
+        {% for p in patients %}
+        <option value="{{ p[0] }}">{{ p[1] }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Date:</label>
+    <input type="date" name="date" required>
+
+    <label>Time:</label>
+    <input type="time" name="time" required>
+
+    <button type="submit">Book Appointment</button>
+</form>
+
+{% endblock %}

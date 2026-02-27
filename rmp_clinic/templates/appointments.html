@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Appointments</h2>
+
+<a href="/add_appointment" class="add-btn">+ Add Appointment</a>
+<table>
+    <tr>
+    <th>ID</th>
+    <th>Patient Name</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Status</th>
+    <th>Actions</th>
+</tr>
+
+{% for a in appointments %}
+<tr>
+    <td>{{ a[0] }}</td>
+    <td>{{ a[1] }}</td>
+    <td>{{ a[2] }}</td>
+    <td>{{ a[3] }}</td>
+    <td>{{ a[4] }}</td>   <!-- Status Column -->
+
+    <td>
+        <a href="/update_status/{{ a[0] }}/Completed" class="complete-btn">Complete</a>
+        <a href="/update_status/{{ a[0] }}/Cancelled" class="cancel-btn">Cancel</a>
+    </td>
+</tr>
+{% endfor %}
+</table>
+
+{% endblock %}

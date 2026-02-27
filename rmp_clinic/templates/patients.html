@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Patients</h1>
+
+<a href="/add_patient" class="add-btn">Add Patient</a>
+
+<!-- Search Box -->
+<form method="GET" action="/patients" class="search-form">
+    <input type="text" name="search" placeholder="Search patient..." value="{{ request.args.get('search', '') }}">
+    <button type="submit">Search</button>
+</form>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Phone</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for p in patients %}
+    <tr>
+        <td>{{ p[0] }}</td>
+        <td>{{ p[1] }}</td>
+        <td>{{ p[2] }}</td>
+        <td>{{ p[3] }}</td>
+        <td>{{ p[4] }}</td>
+        <td>
+            <a href="/edit_patient/{{ p[0] }}" class="edit-btn">Edit</a>
+            <a href="/delete_patient/{{ p[0] }}" class="delete-btn" onclick="return confirm('Are you sure?')">Delete</a>
+            
+    <a href="/add_record/{{ p[0] }}" class="record-btn">Add Record</a>
+    <a href="/history/{{ p[0] }}" class="history-btn">View History</a>
+
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Medical History</h2>
+
+<a href="/download_history/{{ request.view_args['patient_id'] }}" class="download-btn">
+    Download PDF
+</a>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Diagnosis</th>
+        <th>Prescription</th>
+        <th>File</th>
+    </tr>
+
+    {% for r in records %}
+    <tr>
+        <td>{{ r[0] }}</td>
+        <td>{{ r[1] }}</td>
+        <td>{{ r[2] }}</td>
+        <td>
+            {% if r[3] %}
+                <a href="/{{ r[3] }}" target="_blank">View File</a>
+            {% else %}
+                No File
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

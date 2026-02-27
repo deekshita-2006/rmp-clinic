@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - RMP Clinic</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="register-bg">
+
+    <div class="login-container">
+        <h2>Doctor Registration</h2>
+
+        <form method="POST">
+                <input type="text" name="username" placeholder="Create Username" required>
+                <input type="password" name="password" placeholder="Create Password" required>
+                <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <button type="submit">Register</button>
+            </form>
+
+        <p class="register-link">
+            Already have an account? <a href="/">Login</a>
+        </p>
+    </div>
+
+</body>
+</html>

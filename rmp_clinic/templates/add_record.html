@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h2>Add Medical Record</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+    <label>Diagnosis:</label>
+    <textarea name="diagnosis" rows="4" required></textarea>
+
+    <label>Prescription:</label>
+    <textarea name="prescription" rows="4" required></textarea>
+
+    <label>Upload File (Optional):</label>
+    <input type="file" name="file">
+
+    <button type="submit">Save Record</button>
+</form>
+
+{% endblock %}
